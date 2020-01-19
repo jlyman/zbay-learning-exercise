@@ -3,6 +3,33 @@ import React from 'react';
 const formatter = new Intl.NumberFormat('en-gb', { currency: 'USD' })
 
 export default class Main extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      bidAmount: null,
+    }
+
+    this.onBidChange = this.onBidChange.bind(this);
+    this.handleBid = this.handleBid.bind(this);
+  }
+
+  onBidChange(e) {
+    this.setState({ bidAmount: parseFloat(e.target.value) || null });
+  }
+
+  handleBid() {
+    const { bidAmount } = this.state;
+    const { listing } = this.props;
+
+    if (bidAmount <= listing.bid) {
+      alert('Sorry, you must bid more than ' + listing.bid + ' on this item.');
+      return;
+    }
+
+    this.props.onBid(listing.id, bidAmount);
+  }
+
   render() {
     const { listing } = this.props;
 
@@ -17,12 +44,12 @@ export default class Main extends React.Component {
 
         <div className="auctionBidBox">
           <div className="auctionBidBox-currentBid">{formatter.format(listing.bid)}</div>
-          <input type="number" id="bidAmount" />
-          <button type="button">Bid</button>
+          <input type="number" id="bidAmount" onChange={this.onBidChange} />
+          <button type="button" onClick={this.handleBid}>Bid</button>
 
           <div className="auctionBidBox-status">
             You are currently winning this auction!
-              </div>
+          </div>
         </div>
 
         <div>

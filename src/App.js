@@ -12,9 +12,11 @@ class App extends React.Component {
     this.state = {
       listings: [],
       selectedListing: null,
+      myBids: {}
     };
 
     this.handleViewListing = this.handleViewListing.bind(this);
+    this.recordBid = this.recordBid.bind(this);
   }
 
   componentDidMount() {
@@ -34,6 +36,17 @@ class App extends React.Component {
     this.setState({ selectedListing: listingId });
   }
 
+  recordBid(listingId, bidAmount) {
+    // Save it to our list of bids
+    const nextBids = Object.assign({}, this.state.myBids);
+    nextBids[listingId] = bidAmount;
+    this.setState({ myBids: nextBids });
+
+    // Tell the server about our bid
+    // const bidResult = fetch('/server/getAuctionStatus)
+    // Record any bid changes from the server in our local state
+  }
+
   render() {
     const listing = this.state.listings.find(l => l.id === this.state.selectedListing);
 
@@ -44,7 +57,7 @@ class App extends React.Component {
         <div id="content">
           <Sidebar listings={this.state.listings} onListingClick={this.handleViewListing} />
 
-          <Main listing={listing} />
+          <Main listing={listing} onBid={this.recordBid} />
         </div>
       </div>
     );
