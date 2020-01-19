@@ -2,6 +2,12 @@ import React from 'react';
 
 export default class Main extends React.Component {
   render() {
+    const { listing } = this.props;
+
+    if (!listing) {
+      return (<main><h2 class="zeroStateMessage">Select a listing...</h2></main>)
+    }
+
     return (
       <main>
         <h2>This Auction Item</h2>

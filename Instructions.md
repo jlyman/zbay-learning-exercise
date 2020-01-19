@@ -13,3 +13,4 @@
 - Make sidebar and main class components
 
 3. Create the Listing model in JS
+4. Change the Main comp to accept a listing prop, and show a 0 state

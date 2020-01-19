@@ -60,3 +60,9 @@ header h1 {
 main {
   flex: 1;
 }
+
+.zeroStateMessage {
+  text-align: center;
+  color: #ccc;
+  margin: 8rem auto;
+}
