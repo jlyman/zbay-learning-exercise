@@ -66,3 +66,23 @@ main {
   color: #ccc;
   margin: 8rem auto;
 }
+
+.auctionMiniDisplay {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #efefef;
+}
+
+.auctionMiniDisplay-details {
+  color: #333;
+  display: flex;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.auctionMiniDisplay-price,
+.auctionMiniDisplay-viewLink {
+  flex: 1;
+}
