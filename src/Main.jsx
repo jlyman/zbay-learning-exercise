@@ -1,6 +1,6 @@
 import React from 'react';
 
-const formatter = new Intl.NumberFormat('en-gb', { currency: 'USD' })
+const formatter = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' })
 
 export default class Main extends React.Component {
   constructor(props) {
@@ -40,15 +40,18 @@ export default class Main extends React.Component {
     return (
       <main>
         <h2>{listing.title}</h2>
-        <img src={listing.imageUrl} alt={listing.title} />
 
-        <div className="auctionBidBox">
-          <div className="auctionBidBox-currentBid">{formatter.format(listing.bid)}</div>
-          <input type="number" id="bidAmount" onChange={this.onBidChange} />
-          <button type="button" onClick={this.handleBid}>Bid</button>
+        <div className="auctionInfo">
+          <img src={listing.imageUrl} alt={listing.title} />
 
-          <div className="auctionBidBox-status">
-            You are currently winning this auction!
+          <div className="auctionBidBox">
+            <div className="auctionBidBox-currentBid">{formatter.format(listing.bid)}</div>
+            <input type="number" id="bidAmount" onChange={this.onBidChange} />
+            <button type="button" onClick={this.handleBid}>Bid</button>
+
+            <div className="auctionBidBox-status">
+              You are currently winning this auction!
+            </div>
           </div>
         </div>
 
