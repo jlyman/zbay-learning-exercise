@@ -5,32 +5,32 @@ export default class Sidebar extends React.Component {
     return (<div id="sidebar">
       <h3>Live Auctions:</h3>
 
-      <div class="auctionMiniDisplay">
+      <div className="auctionMiniDisplay">
         <img src="" alt="" />
-        <h4 class="auctionMiniDisplay-title">Auction Item</h4>
-        <span class="auctionMiniDisplay-price">$14.95</span> -
-              <span class="auctionMiniDisplay-viewLink">View Item</span>
+        <h4 className="auctionMiniDisplay-title">Auction Item</h4>
+        <span className="auctionMiniDisplay-price">$14.95</span> -
+              <span className="auctionMiniDisplay-viewLink">View Item</span>
       </div>
 
-      <div class="auctionMiniDisplay">
+      <div className="auctionMiniDisplay">
         <img src="" alt="" />
-        <h4 class="auctionMiniDisplay-title">Auction Item</h4>
-        <span class="auctionMiniDisplay-price">$14.95</span> -
-              <span class="auctionMiniDisplay-viewLink">View Item</span>
+        <h4 className="auctionMiniDisplay-title">Auction Item</h4>
+        <span className="auctionMiniDisplay-price">$14.95</span> -
+              <span className="auctionMiniDisplay-viewLink">View Item</span>
       </div>
 
-      <div class="auctionMiniDisplay">
+      <div className="auctionMiniDisplay">
         <img src="" alt="" />
-        <h4 class="auctionMiniDisplay-title">Auction Item</h4>
-        <span class="auctionMiniDisplay-price">$14.95</span> -
-              <span class="auctionMiniDisplay-viewLink">View Item</span>
+        <h4 className="auctionMiniDisplay-title">Auction Item</h4>
+        <span className="auctionMiniDisplay-price">$14.95</span> -
+              <span className="auctionMiniDisplay-viewLink">View Item</span>
       </div>
 
-      <div class="auctionMiniDisplay">
+      <div className="auctionMiniDisplay">
         <img src="" alt="" />
-        <h4 class="auctionMiniDisplay-title">Auction Item</h4>
-        <span class="auctionMiniDisplay-price">$14.95</span> -
-              <span class="auctionMiniDisplay-viewLink">View Item</span>
+        <h4 className="auctionMiniDisplay-title">Auction Item</h4>
+        <span className="auctionMiniDisplay-price">$14.95</span> -
+              <span className="auctionMiniDisplay-viewLink">View Item</span>
       </div>
     </div>
     );

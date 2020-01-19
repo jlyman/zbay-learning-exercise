@@ -14,3 +14,5 @@
 
 3. Create the Listing model in JS
 4. Change the Main comp to accept a listing prop, and show a 0 state
+5. Create a temporary listing model, and pass that in. Replace static text with listing details
+6. Pull in the fetch code from the vanilla JS version, and talk about lifecycle components and state

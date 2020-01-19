@@ -7,7 +7,7 @@ export default class Main extends React.Component {
     const { listing } = this.props;
 
     if (!listing) {
-      return (<main><h2 class="zeroStateMessage">Select a listing...</h2></main>)
+      return (<main><h2 className="zeroStateMessage">Select a listing...</h2></main>)
     }
 
     return (
@@ -15,12 +15,12 @@ export default class Main extends React.Component {
         <h2>{listing.title}</h2>
         <img src={listing.imageUrl} alt={listing.title} />
 
-        <div class="auctionBidBox">
-          <div class="auctionBidBox-currentBid">{formatter.format(listing.bid)}</div>
+        <div className="auctionBidBox">
+          <div className="auctionBidBox-currentBid">{formatter.format(listing.bid)}</div>
           <input type="number" id="bidAmount" />
           <button type="button">Bid</button>
 
-          <div class="auctionBidBox-status">
+          <div className="auctionBidBox-status">
             You are currently winning this auction!
               </div>
         </div>
