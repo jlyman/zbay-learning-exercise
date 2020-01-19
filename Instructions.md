@@ -17,3 +17,4 @@
 5. Create a temporary listing model, and pass that in. Replace static text with listing details
 6. Pull in the fetch code from the vanilla JS version, and talk about lifecycle components and state
 7. Push the listings into the sidebar. Create new component for the listing boxes.
+8. Allow the actual selection of a listing in the main area. Talk through more state and event handlers

@@ -7,7 +7,7 @@ export default class Sidebar extends React.Component {
       <h3>Live Auctions:</h3>
 
       {this.props.listings.map(listing => (
-        <SidebarListingBox id={listing.id} title={listing.title} imageUrl={listing.imageUrl} bid={listing.bid} />
+        <SidebarListingBox id={listing.id} title={listing.title} imageUrl={listing.imageUrl} bid={listing.bid} onListingClick={this.props.onListingClick} key={listing.id} />
       ))}
     </div>
     );

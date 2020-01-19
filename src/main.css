@@ -86,3 +86,13 @@ main {
 .auctionMiniDisplay-viewLink {
   flex: 1;
 }
+
+.auctionMiniDisplay-viewLink {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.auctionMiniDisplay-viewLink:hover {
+  color: #3333ff;
+}

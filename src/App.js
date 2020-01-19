@@ -11,7 +11,10 @@ class App extends React.Component {
 
     this.state = {
       listings: [],
+      selectedListing: null,
     };
+
+    this.handleViewListing = this.handleViewListing.bind(this);
   }
 
   componentDidMount() {
@@ -27,17 +30,19 @@ class App extends React.Component {
     });
   }
 
+  handleViewListing(listingId) {
+    this.setState({ selectedListing: listingId });
+  }
 
   render() {
-    const listing = new Listing(300, 'Private Plane', '', 100, 'A Gulfstream IV, brand new, ready for delivery.', new Date());
-    console.log(this.state.listings);
+    const listing = this.state.listings.find(l => l.id === this.state.selectedListing);
 
     return (
       <div id="app">
         <Header />
 
         <div id="content">
-          <Sidebar listings={this.state.listings} />
+          <Sidebar listings={this.state.listings} onListingClick={this.handleViewListing} />
 
           <Main listing={listing} />
         </div>
