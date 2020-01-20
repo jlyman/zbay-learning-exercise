@@ -19,3 +19,4 @@
 7. Push the listings into the sidebar. Create new component for the listing boxes.
 8. Allow the actual selection of a listing in the main area. Talk through more state and event handlers
 9. Track my own bids
+10. Make API calls to the server
